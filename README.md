@@ -2,7 +2,7 @@
 
 **English** | [中文](#中文)
 
-![](enclosure/makerworld/images/ui_tpe_arr_p0.png)
+![](enclosure/makerworld/images/IMG_1279.JPG)
 
 An airport-style flight information display (FIDS) for the **LilyGO T-Display S3 Touch** (320×170). It shows live departures and arrivals for **Taipei Taoyuan (TPE)** and **Taipei Songshan (TSA)**. The UI mimics a real airport board: amber header, navy rows, alternating Chinese/English text, codeshare cycling and a flip animation. It comes with a 3D-printable inverted-T desk stand.
 

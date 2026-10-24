@@ -1,36 +1,75 @@
-# 機場看板外殼（T-Display S3 **Touch**）
+# Enclosure / 外殼 — LilyGO T-Display S3 **Touch**
 
-![](ref/v_front_iso.png)
+**English** | [中文](#中文)
 
-| 檔案 | 零件 | 建議列印方向 | 顏色 |
-|---|---|---|---|
-| `stl/1_front_shell.stl` | 前框（螢幕框＋按鍵彈片） | 正面朝下（已是此方向） | 黑／深灰 |
-| `stl/2_back_cover.stl` | 背蓋（卡扣、散熱孔） | 翻面，外側平面朝下 | 黑／深灰 |
-| `stl/3_stand.stl` | 立柱底座（後仰 10°） | 底座朝下（已是此方向） | 深灰 |
-| `stl/5_panel.stl` | 黑色看板面板（100×60×20，前框整組從正面嵌入） | 正面朝下（已是此方向） | 黑 |
-| `stl/6_base.stl` | 倒 T 底座（110×70×8，面板插進中間的槽） | 底面朝下 | 黑 |
-| `stl/4_topper_sign.stl` | 頂部招牌「航班資訊 FLIGHT INFO」 | 側立（短邊朝下），不用支撐 | 黃色，字可塗黑 |
+![](makerworld/images/1_front.png)
 
-0.2 mm 層高、PLA 即可，全部不需要支撐。
+## Parts
+Ready-to-print STLs, already in print orientation, are in [`makerworld/stl/`](makerworld/stl/):
 
-## 組裝
-1. 前框正面朝下，板子螢幕朝下從背面放進去：32×55 的玻璃外框邊從內側靠在前框唇邊上，27×50 的玻璃面從開口露出來。
-2. 蓋上背蓋，壓到兩側四個卡鉤「喀」一聲扣進側壁的小方孔。背蓋內側的橫樑凸點從後面撐住電路板。要拆時，用牙籤從側面方孔把卡鉤往內推，再從遠離 USB 那端的缺口撬開。
-3. 把螢幕下緣插進立柱的托架，再把招牌套在上緣。外殼上下對稱，螢幕方向 (rotation 1/3) 哪一邊朝上都能裝。
+| File | Part | Orientation |
+|---|---|---|
+| `1_front_shell.stl` | Front shell (screen bezel and flexure buttons) | Face down |
+| `2_back_cover.stl` | Back cover (4 snap hooks, spring beams, vents) | Outer face down, hooks up |
+| `3_panel.stl` | Display panel, 100×60×20 mm | Face down |
+| `4_base.stl` | Inverted-T base, 110×70×8 mm | Bottom down |
 
-4. 倒 T 看板版：面板下緣插進底座的槽；USB 端朝左（rotation 3），把組好的前框從面板正面壓進嵌槽，靠背面擋邊定位；要拆時從面板背面把前框往前推出。USB 線從面板左側孔插入。面板與底座由 `build_block.py` 產生。
+PLA at 0.2 mm layer height works. No supports needed. The ledge on the back of the panel has a small 1.5 mm overhang that most printers handle fine. Black filament is recommended.
 
-## 功能開孔
-- **BOOT / KEY 按鍵**：前框 USB 那側上下兩個圓形凹點，按下去由彈片頂到按鍵
+`stl/` holds the same parts in model coordinates, plus an older pole stand (`3_stand.stl`) and a topper sign (`4_topper_sign.stl`) that are no longer used.
+
+## Assembly
+1. Place the front shell face down. Insert the board screen-first from the back. The 32×55 mm glass frame rests against the inner lip, and the 27×50 mm glass shows through the opening.
+2. Press the back cover in until all four hooks click into the small windows in the side walls. The spring beams on the inside hold the PCB in place. To open it, push the hooks inward through the side windows with a toothpick, then pry the cover out at the notch on the end away from USB.
+3. Slide the bottom edge of the panel into the slot in the base.
+4. Route the USB cable through the hole on the left of the panel and plug it in. Press the shell module into the panel from the front with the USB end on the left (`SCREEN_ROTATION 3`). To remove the module, push it out from the back of the panel.
+
+## Openings
+- **BOOT / KEY buttons**: two round dimples on the USB end of the front shell. Pressing one flexes a tab whose plunger presses the button.
+- **USB-C**: 12.6 × 7.2 mm opening on the side
+- **RST**: Ø2 mm pinholes on the top and bottom edges (use a paperclip)
+- **Back cover vents**: 5 slots
+
+## Notes
+- Board dimensions come from LilyGO's official `t-display-s3-full.stp`. Touch-glass dimensions come from the official `CapacitiveTouchScreen.stp`. These reference files are not included in this repo.
+- Board thickness can vary slightly between batches. If the buttons don't register, build up the plunger tips a little. If a button stays pressed, sand the tips down.
+- To change dimensions, edit the parameters at the top of `build_enclosure.py` / `build_block.py` and re-run them in Fusion 360. `fusion_helpers.py` holds the shared helpers.
+- Source files: `fids_enclosure.f3d`, `fids_enclosure.step`
+
+---
+
+## 中文
+
+[English](#parts) | **中文**
+
+### 零件
+可直接列印的 STL（已轉成列印方向）在 [`makerworld/stl/`](makerworld/stl/)：
+
+| 檔案 | 零件 | 列印方向 |
+|---|---|---|
+| `1_front_shell.stl` | 前框（螢幕框＋按鍵彈片） | 正面朝下 |
+| `2_back_cover.stl` | 背蓋（4 個卡鉤、彈片、散熱孔） | 外側平面朝下，卡鉤朝上 |
+| `3_panel.stl` | 看板面板 100×60×20 mm | 正面朝下 |
+| `4_base.stl` | 倒 T 底座 110×70×8 mm | 底面朝下 |
+
+PLA、0.2 mm 層高即可，全部不需要支撐。面板背面擋邊有約 1.5 mm 的小懸空，一般印表機都印得好。建議用黑色線材。
+
+`stl/` 是同樣的零件，但保留模型座標；另外還有舊版的立柱底座（`3_stand.stl`）和頂部招牌（`4_topper_sign.stl`），現在已經不用了。
+
+### 組裝
+1. 前框正面朝下，板子螢幕朝下，從背面放進去。32×55 mm 的玻璃外框邊會從內側靠在前框唇邊上，27×50 mm 的玻璃從開口露出來。
+2. 壓上背蓋，壓到四個卡鉤「喀」一聲扣進側壁的小方孔。背蓋內側的彈片會從後面撐住電路板。要拆時，用牙籤從側面方孔把卡鉤往內推，再從遠離 USB 那端的缺口撬開。
+3. 面板下緣插進底座的槽。
+4. USB 線從面板左側的孔穿入並接上板子，再把前框模組 USB 端朝左（`SCREEN_ROTATION 3`），從正面壓進面板。要拆時從面板背面往前推出來。
+
+### 功能開孔
+- **BOOT / KEY 按鍵**：前框 USB 那端的兩個圓形凹點。按下去時，彈片上的頂柱會頂到按鍵。
 - **USB-C**：側面開口 12.6 × 7.2 mm
 - **RST**：上下兩側各有一個 Ø2 小孔，用迴紋針按
 - **背蓋散熱孔**：5 條
 
-## 尺寸來源與注意事項
-- 板子：LilyGO 官方 `t-display-s3-full.stp`
-- 觸控玻璃：官方 `CapacitiveTouchScreen.stp`（32×55 外框邊＋27×50 凸起玻璃，總厚 1.4），並用社群 Touch 外殼的玻璃槽尺寸交叉確認
-- 外形 35.6 × 65.8 × 14.6 mm；含立柱與招牌約 70 × 50 × 95 mm
-
-**列印前建議用卡尺確認你的板子**：玻璃寬 27 / 外框邊 32 mm，玻璃正面到背面最高零件約 11.3 mm。
-不一致的話，改 `build_enclosure.py` 開頭的參數，在 Fusion 360 重跑即可（`fusion_helpers.py` 是共用函式）。
-原始 Fusion 檔：`fids_enclosure.f3d`；STEP：`fids_enclosure.step`
+### 注意事項
+- 板子尺寸參考 LilyGO 官方的 `t-display-s3-full.stp`，觸控玻璃參考官方的 `CapacitiveTouchScreen.stp`。這些參考檔沒有放在這個 repo 裡。
+- 不同批次的板子厚度可能略有差異。按鍵按不到的話，把頂柱尖端墊高一點；一直按住的話，把尖端磨短一點。
+- 要改尺寸，修改 `build_enclosure.py` / `build_block.py` 開頭的參數，再在 Fusion 360 重跑即可。`fusion_helpers.py` 是共用函式。
+- 原始檔：`fids_enclosure.f3d`、`fids_enclosure.step`

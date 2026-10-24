@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<title>MakerWorld Description</title>
+<style>
+  body { font-family: -apple-system, "PingFang TC", sans-serif; max-width: 760px; margin: 32px auto; padding: 0 16px; line-height: 1.6; color: #222; background: #fff; }
+  .hint { background: #fff4cc; border: 1px solid #f0d36b; padding: 10px 14px; border-radius: 6px; font-size: 14px; }
+</style>
+</head>
+<body>
+<p class="hint">全選本頁內容（⌘A）→ 複製（⌘C）→ 貼到 MakerWorld 的 Description 編輯器（⌘V），粗體、標題、清單會一起帶過去。貼上後把這段黃色提示刪掉。</p>
+
+<h2>機場航班看板桌面顯示器｜LilyGO T-Display S3 Touch</h2>
+<p>把 LilyGO T-Display S3 <b>Touch</b> 變成一個迷你的機場航班資訊看板（FIDS）。側面是倒 T 字形，就像航廈裡立著的看板，即時顯示桃園機場、松山機場的出發／抵達航班。</p>
+
+<h3>特色</h3>
+<ul>
+  <li>免螺絲：板子從背面放入前框，背蓋用 4 個卡鉤扣上</li>
+  <li>BOOT / KEY 兩個按鍵可以從正面按（前框上的彈片）</li>
+  <li>觸控螢幕全區可用，USB-C 從左側接線</li>
+  <li>前框模組可以單獨使用，也可以嵌進看板面板</li>
+</ul>
+
+<h3>需要的硬體</h3>
+<ul>
+  <li>LilyGO T-Display S3 <b>Touch</b> 版（1.9" 170×320，有觸控玻璃的版本；非觸控版尺寸不同，裝不進去）</li>
+  <li>USB-C 線</li>
+</ul>
+
+<h3>零件與列印</h3>
+<ul>
+  <li><b>前框</b>（1_front_shell）：正面朝下</li>
+  <li><b>背蓋</b>（2_back_cover）：外側平面朝下，卡鉤朝上</li>
+  <li><b>看板面板</b>（3_panel，100×60×20 mm）：正面朝下</li>
+  <li><b>底座</b>（4_base，110×70×8 mm）：底面朝下</li>
+</ul>
+<p>PLA 或 PETG 都可以，0.2 mm 層高、3 層牆、15% 填充，<b>不需要支撐</b>。建議全部用黑色。面板背面擋邊有約 1.5 mm 的小懸空，一般都能印好。</p>
+
+<h3>組裝</h3>
+<ol>
+  <li>前框正面朝下，板子螢幕朝下、USB-C 對準側面開口，從背面放進去</li>
+  <li>壓上背蓋，聽到「喀」聲表示 4 個卡鉤都扣上了</li>
+  <li>面板下緣插進底座的槽</li>
+  <li>USB 線從面板左側孔穿入並接上板子，再把前框模組 USB 端朝左、從正面壓進面板</li>
+  <li>拆背蓋：用牙籤從前框側面的方孔把卡鉤往內推，再從缺口撬開</li>
+</ol>
+
+<h3>韌體</h3>
+<p>ESP32-S3 Arduino（PlatformIO），資料來自桃園機場、松山機場官方公開航班資料，每 3 分鐘更新一次。<br>
+原始碼與燒錄說明：<a href="https://github.com/TN666/tiny-fids">https://github.com/TN666/tiny-fids</a></p>
+<ul>
+  <li>觸控：上下滑換頁、左右滑切換機場、點標題切換出發／抵達、點航班看詳細資訊、長按強制更新</li>
+  <li>按鍵：BOOT 切換機場（長按調亮度），KEY 換頁（長按切換出發／抵達）</li>
+  <li>第一次開機時，用手機連 Wi-Fi「FIDS-Setup」設定網路</li>
+</ul>
+
+<h3>注意</h3>
+<p>不同批次的板子厚度可能略有差異。按鍵按不到的話，把前框內側頂柱的尖端墊高一點；一直按住的話，把尖端磨短一點。</p>
+
+<hr>
+
+<h2>Airport FIDS Desk Display – LilyGO T-Display S3 Touch</h2>
+<p>Turn a LilyGO T-Display S3 <b>Touch</b> into a tiny airport Flight Information Display (FIDS). The inverted-T profile mimics the standing information boards in airport terminals. It shows live departures and arrivals for Taipei Taoyuan (TPE) and Taipei Songshan (TSA).</p>
+
+<h3>Features</h3>
+<ul>
+  <li>Screwless: the board drops in from the back, and the back cover clips on with 4 snap hooks</li>
+  <li>BOOT / KEY buttons are pressable from the front (flexure buttons)</li>
+  <li>Full touch area exposed; USB-C on the left side</li>
+  <li>The front shell module works on its own, or slots into the display panel</li>
+</ul>
+
+<h3>Hardware</h3>
+<ul>
+  <li>LilyGO T-Display S3 <b>Touch</b> (1.9" 170×320 with touch glass; the non-touch version has different dimensions and will not fit)</li>
+  <li>USB-C cable</li>
+</ul>
+
+<h3>Printing</h3>
+<ul>
+  <li><b>Front shell</b> (1_front_shell): face down</li>
+  <li><b>Back cover</b> (2_back_cover): outer face down, hooks up</li>
+  <li><b>Display panel</b> (3_panel, 100×60×20 mm): face down</li>
+  <li><b>Base</b> (4_base, 110×70×8 mm): bottom down</li>
+</ul>
+<p>PLA or PETG, 0.2 mm layers, 3 walls, 15% infill, <b>no supports</b>. Black filament recommended. The ledge on the back of the panel has a small 1.5 mm overhang that most printers handle fine.</p>
+
+<h3>Assembly</h3>
+<ol>
+  <li>Place the shell face down, then insert the board screen-first from the back with USB-C aligned to the side opening</li>
+  <li>Press the back cover in until all 4 hooks click</li>
+  <li>Slide the panel's bottom edge into the slot in the base</li>
+  <li>Route the USB cable through the hole on the left of the panel and plug it in, then press the shell module into the panel from the front with the USB end on the left</li>
+  <li>To remove the back cover, push the hooks inward through the small side windows with a toothpick, then pry the cover out at the notch</li>
+</ol>
+
+<h3>Firmware</h3>
+<p>ESP32-S3 Arduino (PlatformIO), using the official open flight data from Taoyuan and Songshan airports, refreshed every 3 minutes.<br>
+Source code and flashing guide: <a href="https://github.com/TN666/tiny-fids">https://github.com/TN666/tiny-fids</a></p>
+<ul>
+  <li>Touch: swipe up/down to change page, left/right to switch airport, tap the header to switch departures/arrivals, tap a flight for details, long-press to refresh</li>
+  <li>Buttons: BOOT switches airport (long press: brightness), KEY next page (long press: departures/arrivals)</li>
+  <li>On first boot, connect to the "FIDS-Setup" Wi-Fi network with your phone to set up Wi-Fi</li>
+</ul>
+
+<h3>Note</h3>
+<p>Board thickness can vary slightly between batches. If the buttons don't register, build up the plunger tips inside the shell a little; if a button stays pressed, sand the tips down a little.</p>
+</body>
+</html>

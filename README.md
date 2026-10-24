@@ -55,7 +55,7 @@ sim/build.sh sim/out 1792571400    # simulate a given time (epoch; here 2026-10-
 
 ## 3D-printed enclosure
 An inverted-T airport-board stand made of four parts: front shell, snap-fit back cover, display panel and base. It needs no screws and no supports.
-The STLs are in [`enclosure/makerworld/stl/`](enclosure/makerworld/stl/). Design notes and assembly steps are in [`enclosure/makerworld/README.md`](enclosure/makerworld/README.md).
+Download on **[MakerWorld](https://makerworld.com/en/models/3487872-airport-fids-desk-display)**, or get the STLs from [`enclosure/makerworld/stl/`](enclosure/makerworld/stl/). Design notes and assembly steps are in [`enclosure/makerworld/README.md`](enclosure/makerworld/README.md).
 Board dimensions come from LilyGO's official 3D model.
 
 ## License
@@ -118,7 +118,7 @@ sim/build.sh sim/out 1792571400    # 指定模擬時間（epoch，此例為 2026
 
 ### 3D 列印外殼
 倒 T 字形的機場看板外殼，分成四個零件：前框、卡扣背蓋、看板面板、底座。免螺絲、免支撐。
-STL 在 [`enclosure/makerworld/stl/`](enclosure/makerworld/stl/)，設計說明與組裝方式見 [`enclosure/makerworld/README.md`](enclosure/makerworld/README.md)。
+可以到 **[MakerWorld](https://makerworld.com/en/models/3487872-airport-fids-desk-display)** 下載，STL 也在 [`enclosure/makerworld/stl/`](enclosure/makerworld/stl/)，設計說明與組裝方式見 [`enclosure/makerworld/README.md`](enclosure/makerworld/README.md)。
 板子尺寸參考 LilyGO 官方 3D 模型。
 
 ### 授權

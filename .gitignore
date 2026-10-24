@@ -1,0 +1,10 @@
+.pio/
+.vscode/
+sim/build/
+sim/out*/
+.DS_Store
+# 第三方參考檔（授權不屬於本專案）
+enclosure/ref/stuttgart/
+enclosure/ref/*.stp
+enclosure/ref/*pinmap*
+enclosure/ref/readme_dim.md

@@ -2,10 +2,10 @@
 
 **English** | [中文](#中文)
 
-![](makerworld/images/1_front.png)
+![](images/1_front.png)
 
 ## Parts
-Ready-to-print STLs, already in print orientation, are in [`makerworld/stl/`](makerworld/stl/):
+Ready-to-print STLs, already in print orientation, are in [`stl/`](stl/):
 
 | File | Part | Orientation |
 |---|---|---|
@@ -15,8 +15,6 @@ Ready-to-print STLs, already in print orientation, are in [`makerworld/stl/`](ma
 | `4_base.stl` | Inverted-T base, 110×70×8 mm | Bottom down |
 
 PLA at 0.2 mm layer height works. No supports needed. The ledge on the back of the panel has a small 1.5 mm overhang that most printers handle fine. Black filament is recommended.
-
-`stl/` holds the same parts in model coordinates, plus an older pole stand (`3_stand.stl`) and a topper sign (`4_topper_sign.stl`) that are no longer used.
 
 ## Assembly
 1. Place the front shell face down. Insert the board screen-first from the back. The 32×55 mm glass frame rests against the inner lip, and the 27×50 mm glass shows through the opening.
@@ -33,8 +31,6 @@ PLA at 0.2 mm layer height works. No supports needed. The ledge on the back of t
 ## Notes
 - Board dimensions come from LilyGO's official `t-display-s3-full.stp`. Touch-glass dimensions come from the official `CapacitiveTouchScreen.stp`. These reference files are not included in this repo.
 - Board thickness can vary slightly between batches. If the buttons don't register, build up the plunger tips a little. If a button stays pressed, sand the tips down.
-- To change dimensions, edit the parameters at the top of `build_enclosure.py` / `build_block.py` and re-run them in Fusion 360. `fusion_helpers.py` holds the shared helpers.
-- Source files: `fids_enclosure.f3d`, `fids_enclosure.step`
 
 ---
 
@@ -43,7 +39,7 @@ PLA at 0.2 mm layer height works. No supports needed. The ledge on the back of t
 [English](#parts) | **中文**
 
 ### 零件
-可直接列印的 STL（已轉成列印方向）在 [`makerworld/stl/`](makerworld/stl/)：
+可直接列印的 STL（已轉成列印方向）在 [`stl/`](stl/)：
 
 | 檔案 | 零件 | 列印方向 |
 |---|---|---|
@@ -53,8 +49,6 @@ PLA at 0.2 mm layer height works. No supports needed. The ledge on the back of t
 | `4_base.stl` | 倒 T 底座 110×70×8 mm | 底面朝下 |
 
 PLA、0.2 mm 層高即可，全部不需要支撐。面板背面擋邊有約 1.5 mm 的小懸空，一般印表機都印得好。建議用黑色線材。
-
-`stl/` 是同樣的零件，但保留模型座標；另外還有舊版的立柱底座（`3_stand.stl`）和頂部招牌（`4_topper_sign.stl`），現在已經不用了。
 
 ### 組裝
 1. 前框正面朝下，板子螢幕朝下，從背面放進去。32×55 mm 的玻璃外框邊會從內側靠在前框唇邊上，27×50 mm 的玻璃從開口露出來。
@@ -71,5 +65,3 @@ PLA、0.2 mm 層高即可，全部不需要支撐。面板背面擋邊有約 1.5
 ### 注意事項
 - 板子尺寸參考 LilyGO 官方的 `t-display-s3-full.stp`，觸控玻璃參考官方的 `CapacitiveTouchScreen.stp`。這些參考檔沒有放在這個 repo 裡。
 - 不同批次的板子厚度可能略有差異。按鍵按不到的話，把頂柱尖端墊高一點；一直按住的話，把尖端磨短一點。
-- 要改尺寸，修改 `build_enclosure.py` / `build_block.py` 開頭的參數，再在 Fusion 360 重跑即可。`fusion_helpers.py` 是共用函式。
-- 原始檔：`fids_enclosure.f3d`、`fids_enclosure.step`

@@ -56,3 +56,6 @@ sim/build.sh sim/out 1792571400   # 指定模擬時間（epoch，此例為 2026-
 倒 T 字形的機場看板外殼（前框＋卡扣背蓋＋看板面板＋底座），免螺絲、免支撐。
 STL 在 [`enclosure/makerworld/stl/`](enclosure/makerworld/stl/)，設計說明與組裝方式見 [`enclosure/README.md`](enclosure/README.md)。
 外殼由 Fusion 360 API 腳本產生（`enclosure/build_enclosure.py`、`enclosure/build_block.py`），板子尺寸參考 LilyGO 官方 3D 模型。
+
+## 授權
+[MIT](LICENSE)。航班資料來自桃園國際機場、臺北松山機場的公開資料，版權屬於原提供單位。

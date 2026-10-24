@@ -14,7 +14,7 @@ Ready-to-print STLs, already in print orientation, are in [`stl/`](stl/):
 | `3_panel.stl` | Display panel, 100×60×20 mm | Face down |
 | `4_base.stl` | Inverted-T base, 110×70×8 mm | Bottom down |
 
-PLA at 0.2 mm layer height works. No supports needed. The ledge on the back of the panel has a small 1.5 mm overhang that most printers handle fine. Black filament is recommended.
+PLA or PETG at 0.2 mm layer height both work. No supports needed. The ledge on the back of the panel has a small 1.5 mm overhang that most printers handle fine. Black filament is recommended.
 
 ## Assembly
 1. Place the front shell face down. Insert the board screen-first from the back. The 32×55 mm glass frame rests against the inner lip, and the 27×50 mm glass shows through the opening.
@@ -48,7 +48,7 @@ PLA at 0.2 mm layer height works. No supports needed. The ledge on the back of t
 | `3_panel.stl` | 看板面板 100×60×20 mm | 正面朝下 |
 | `4_base.stl` | 倒 T 底座 110×70×8 mm | 底面朝下 |
 
-PLA、0.2 mm 層高即可，全部不需要支撐。面板背面擋邊有約 1.5 mm 的小懸空，一般印表機都印得好。建議用黑色線材。
+PLA 或 PETG 都可以，0.2 mm 層高，全部不需要支撐。面板背面擋邊有約 1.5 mm 的小懸空，一般印表機都印得好。建議用黑色線材。
 
 ### 組裝
 1. 前框正面朝下，板子螢幕朝下，從背面放進去。32×55 mm 的玻璃外框邊會從內側靠在前框唇邊上，27×50 mm 的玻璃從開口露出來。

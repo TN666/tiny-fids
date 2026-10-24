@@ -26,7 +26,7 @@
 | 3_panel.stl | 看板面板 100×60×20 | 正面朝下 |
 | 4_base.stl | 底座 110×70×8 | 底面朝下 |
 
-- PLA，0.2 mm 層高，3 層牆，15% 填充，**不需要支撐**
+- PLA 或 PETG 都可以，0.2 mm 層高，3 層牆，15% 填充，**不需要支撐**
 - 建議全部用黑色
 - 面板背面擋邊有約 1.5 mm 的小懸空，一般都能印好
 
@@ -64,7 +64,7 @@ Turn a LilyGO T-Display S3 **Touch** into a tiny airport Flight Information Disp
 - USB-C cable
 
 **Printing**
-- PLA, 0.2 mm layers, 3 walls, 15% infill, **no supports**
+- PLA or PETG, 0.2 mm layers, 3 walls, 15% infill, **no supports**
 - Black filament recommended
 - Orientation: shell and panel face down; back cover outer face down; base flat
 

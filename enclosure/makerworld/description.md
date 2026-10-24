@@ -39,6 +39,7 @@
 
 **韌體**
 ESP32-S3 Arduino（PlatformIO），資料來自桃園機場、松山機場官方公開航班資料，每 3 分鐘更新一次。
+原始碼與燒錄說明：https://github.com/TN666/tiny-fids
 - 觸控：上下滑換頁、左右滑切換機場、點標題切換出發／抵達、點航班看詳細資訊、長按強制更新
 - 按鍵：BOOT 切換機場（長按調亮度），KEY 換頁（長按切換出發／抵達）
 - 第一次開機時，用手機連 Wi-Fi「FIDS-Setup」設定網路
@@ -75,7 +76,8 @@ Turn a LilyGO T-Display S3 **Touch** into a tiny airport Flight Information Disp
 5. To remove the back cover, push the hooks inward through the small side windows with a toothpick, then pry the cover out at the notch
 
 **Firmware**
-ESP32-S3 Arduino (PlatformIO), using the official open flight data from Taoyuan and Songshan airports, refreshed every 3 minutes. On first boot, connect to the "FIDS-Setup" Wi-Fi network to configure Wi-Fi.
+ESP32-S3 Arduino (PlatformIO), using the official open flight data from Taoyuan and Songshan airports, refreshed every 3 minutes. Source code and flashing guide: https://github.com/TN666/tiny-fids
+On first boot, connect to the "FIDS-Setup" Wi-Fi network to configure Wi-Fi.
 
 **Note**
 Board thickness can vary slightly between batches. If the buttons don't register, build up the plunger tips inside the shell a little; if a button stays pressed, sand the tip down a little.
